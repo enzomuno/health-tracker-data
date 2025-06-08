@@ -32,12 +32,11 @@ jobs:
       - name: Rodar pipeline
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL}}
-          DB_HOST: ${{ secrets.DB_HOST }}
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_NAME: ${{ secrets.DB_NAME }}
-          FATSECRET_CLIENT_ID: ${{ secrets.FATSECRET_CLIENT_ID }}
-          FATSECRET_CLIENT_SECRET: ${{ secrets.FATSECRET_CLIENT_SECRET }}
+          FAT_SECRET_CONSUMER_KEY: ${{ secrets.FAT_SECRET_CONSUMER_KEY }}
+          FATSECRET_CLIENT_SECRET: ${{ secrets.FAT_SECRET_CONSUMER_SECRET }}
+          FATSECRET_CLIENT_ID: ${{ secrets.FAT_SECRET_CLIENT_ID }}
+          FAT_SECRET_OAUTH_TOKEN: ${{ secrets.FAT_SECRET_OAUTH_TOKEN }}
+          FAT_SECRET_OAUTH_SECRET: ${{ secrets.FAT_SECRET_OAUTH_SECRET }}
 
         run: |
           python -m src.main
