@@ -2,7 +2,7 @@ name: Daily Health Tracker Pipeline
 
 on:
   schedule:
-    - cron: '30 1 * * *'  # Roda todo dia às 09h BRT (12h UTC)
+    - cron: '0 2 * * *'
   workflow_dispatch:      # Permite rodar manualmente
 
 jobs:
