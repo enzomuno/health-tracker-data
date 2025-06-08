@@ -4,7 +4,7 @@ import pandas as pd
 
 # Define o escopo e autentica
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(r"C:\muno_environment\projects\health-tracker-data-pipeline\gscredentials.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("gscredentials.json", scope)
 client = gspread.authorize(creds)
 
 # Abre a planilha pelo pelo ID
