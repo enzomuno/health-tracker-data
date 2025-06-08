@@ -31,6 +31,7 @@ jobs:
 
       - name: Rodar pipeline
         env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL}}
           DB_HOST: ${{ secrets.DB_HOST }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
